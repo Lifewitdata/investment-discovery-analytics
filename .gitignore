@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Excel lock and backup files, created while a workbook is open
+~$*.xlsx
+*.tmp
+
+# OS and editor cruft
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Local database dumps or exports pasted in while exploring; the fixture CSVs in
+# data/raw are intentionally committed - scripts/validate_data.py needs them.
+/out/
+*.bak

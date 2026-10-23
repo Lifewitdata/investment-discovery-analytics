@@ -1,0 +1,6 @@
+\set ON_ERROR_STOP on
+BEGIN;
+\copy raw.users(user_id,signup_date,kyc_status,declared_risk_appetite) FROM 'data/raw/users.csv' WITH (FORMAT csv, HEADER true)
+\copy raw.discovery_events(event_id,user_id,event_timestamp,search_filter_used,portfolio_viewed) FROM 'data/raw/discovery_events.csv' WITH (FORMAT csv, HEADER true)
+\copy raw.transactions(transaction_id,user_id,portfolio_id,investment_amount,transaction_status,transaction_timestamp) FROM 'data/raw/transactions.csv' WITH (FORMAT csv, HEADER true)
+COMMIT;
